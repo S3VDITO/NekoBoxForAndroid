@@ -85,6 +85,9 @@ object DataStore : OnPreferenceDataStoreChangeListener {
     }
 
     var appTLSVersion by configurationStore.string(Key.APP_TLS_VERSION)
+    var proxyFetchUrl by configurationStore.string(Key.PROXY_FETCH_URL)
+    var proxyFetchAutoRefresh by configurationStore.boolean(Key.PROXY_FETCH_AUTO_REFRESH)
+    var proxyFetchAutoRefreshInterval by configurationStore.stringToInt(Key.PROXY_FETCH_AUTO_REFRESH_INTERVAL) { 15 }
     var enableClashAPI by configurationStore.boolean(Key.ENABLE_CLASH_API)
     var showBottomBar by configurationStore.boolean(Key.SHOW_BOTTOM_BAR)
 
@@ -156,7 +159,7 @@ object DataStore : OnPreferenceDataStoreChangeListener {
 
     var appendHttpProxy by configurationStore.boolean(Key.APPEND_HTTP_PROXY)
     var connectionTestURL by configurationStore.string(Key.CONNECTION_TEST_URL) { CONNECTION_TEST_URL }
-    var connectionTestConcurrent by configurationStore.int("connectionTestConcurrent") { 5 }
+    var connectionTestConcurrent by configurationStore.int("connectionTestConcurrent") { 20 }
     var alwaysShowAddress by configurationStore.boolean(Key.ALWAYS_SHOW_ADDRESS)
 
     var tunImplementation by configurationStore.stringToInt(Key.TUN_IMPLEMENTATION) { TunImplementation.GVISOR }

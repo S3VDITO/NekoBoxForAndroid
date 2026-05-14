@@ -8,7 +8,15 @@ else
   export SRC_ROOT=$(realpath .)
 fi
 
-DEPS=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin
+_HOST_OS=$(uname -s)
+if [[ "$_HOST_OS" == MINGW* || "$_HOST_OS" == MSYS* || "$_HOST_OS" == CYGWIN* ]]; then
+  _HOST_TAG=windows-x86_64
+elif [[ "$_HOST_OS" == Darwin ]]; then
+  _HOST_TAG=darwin-x86_64
+else
+  _HOST_TAG=linux-x86_64
+fi
+DEPS=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$_HOST_TAG/bin
 
 export ANDROID_ARM_CC=$DEPS/armv7a-linux-androideabi21-clang
 export ANDROID_ARM_CXX=$DEPS/armv7a-linux-androideabi21-clang++

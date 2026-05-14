@@ -151,6 +151,9 @@ object Key {
 
     const val APP_TLS_VERSION = "appTLSVersion"
     const val ENABLE_CLASH_API = "enableClashAPI"
+    const val PROXY_FETCH_URL = "proxyFetchUrl"
+    const val PROXY_FETCH_AUTO_REFRESH = "proxyFetchAutoRefresh"
+    const val PROXY_FETCH_AUTO_REFRESH_INTERVAL = "proxyFetchAutoRefreshInterval"
 }
 
 object TunImplementation {
