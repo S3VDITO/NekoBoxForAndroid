@@ -1,33 +1,84 @@
-# NekoBox for Android
+# NekoBox for Android — Mod (WL Auto-Fetch)
 
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![Releases](https://img.shields.io/github/v/release/MatsuriDayo/NekoBoxForAndroid)](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-orange.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+**Модификация** [NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid) с автоматическим обновлением белых списков (whitelist) для обхода блокировок в РФ.
+
+Списки прокси берутся из проекта **[zieng2/wl](https://github.com/zieng2/wl)**.
+
+---
+
+## Что добавлено (Mod Features)
+
+Все функции мода доступны в разделе **Инструменты** (Tools):
+
+| Функция | Описание |
+|---|---|
+| **Fetch Proxy List** | Автоматическая загрузка и импорт прокси-серверов по URL |
+| **Автообновление** | Автоматический фетч и обновление списка через заданный интервал (минуты) |
+| **Auto-refresh** | Автоматическая проверка и удаление нерабочих серверов |
+
+### Как пользоваться
+
+1. Откройте **Инструменты** (Tools) — вкладка **Сеть**
+2. В поле URL уже предзаполнен адрес: `https://gitverse.ru/api/repos/zieng2/wl/raw/br`
+3. Включите **Автообновление** и задайте интервал (например, 15 минут)
+4. Нажмите **DOWNLOAD** — список загрузится, нерабочие прокси будут удалены автоматически
+5. Готово — рабочие серверы появятся в основном списке
+
+---
+
+## Скриншоты
+
+<table>
+  <tr>
+    <td><img src="screenshots/main-screen-1.jpg" width="250"/></td>
+    <td><img src="screenshots/main-screen-2.jpg" width="250"/></td>
+    <td><img src="screenshots/tools-fetch-proxy.jpg" width="250"/></td>
+  </tr>
+  <tr>
+    <td align="center">Список серверов</td>
+    <td align="center">Загруженные прокси</td>
+    <td align="center">Инструменты → Fetch Proxy List</td>
+  </tr>
+</table>
+
+---
+
+## Скачать / Downloads
+
+Смотри [Releases](../../releases) этого репозитория.
+
+> **Оригинальный проект:** [MatsuriDayo/NekoBoxForAndroid](https://github.com/MatsuriDayo/NekoBoxForAndroid)
+>
+> Данный мод — форк оригинального NekoBox с добавлением функций автофетча и авторефреша белых списков. Оригинальные авторы и credits указаны ниже.
+
+---
+
+## Источник белых списков
+
+Списки прокси-серверов предоставляются проектом:
+
+**[zieng2/wl](https://github.com/zieng2/wl)**
+
+---
+
+## Об оригинальном проекте
 
 sing-box / universal proxy toolchain for Android.
 
 一款使用 sing-box 的 Android 通用代理软件.
 
-## 下载 / Downloads
-
-[![GitHub All Releases](https://img.shields.io/github/downloads/Matsuridayo/NekoBoxForAndroid/total?label=downloads-total&logo=github&style=flat-square)](https://github.com/Matsuridayo/NekoBoxForAndroid/releases)
-
-[GitHub Releases 下载](https://github.com/Matsuridayo/NekoBoxForAndroid/releases)
-
-**Google Play 版本自 2024 年 5 月起已被第三方控制，为非开源版本，请不要下载。**
-
-**The Google Play version has been controlled by a third party since May 2024 and is a non-open
-source version. Please do not download it.**
-
-## 更新日志 & Telegram 发布频道 / Changelog & Telegram Channel
+### 更新日志 & Telegram 发布频道 / Changelog & Telegram Channel
 
 https://t.me/Matsuridayo
 
-## 项目主页 & 文档 / Homepage & Documents
+### 项目主页 & 文档 / Homepage & Documents
 
 https://matsuridayo.github.io
 
-## 支持的代理协议 / Supported Proxy Protocols
+### 支持的代理协议 / Supported Proxy Protocols
 
 * SOCKS (4/4a/5)
 * HTTP(S)
@@ -50,7 +101,7 @@ https://matsuridayo.github.io
 Please visit [here](https://matsuridayo.github.io/nb4a-plugin/) to download plugins for full proxy
 supports.
 
-## 支持的订阅格式 / Supported Subscription Format
+### 支持的订阅格式 / Supported Subscription Format
 
 * 一些广泛使用的格式 (如 Shadowsocks, ClashMeta 和 v2rayN)
 * sing-box 出站
@@ -61,6 +112,8 @@ supports.
 * sing-box outbound
 
 Only resolving outbound, i.e. nodes, is supported. Information such as diversion rules are ignored.
+
+---
 
 ## 捐助 / Donate
 
@@ -85,6 +138,8 @@ XMR
 
 </details>
 
+---
+
 ## Credits
 
 Core:
@@ -99,3 +154,7 @@ Android GUI:
 Web Dashboard:
 
 - [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+
+White Lists:
+
+- [zieng2/wl](https://github.com/zieng2/wl)
